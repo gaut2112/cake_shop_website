@@ -1,0 +1,125 @@
+	<div id="row">
+	<div>
+	<img src="chocolate/c1.jpg" class="pic1" id="p11"/>
+	</div>
+	
+    <div>
+	<img src="chocolate/c2.jpg" class="pic" id="p21"/>
+	</div>
+	
+	<div>
+	<img src="chocolate/c3.jpg" class="pic" id="p31"/>
+	</div>
+	
+	<div>
+	<img src="chocolate/c4.jpg"  class="pic" id="p41"/>
+	</div>
+	
+	<div>
+	<img src="chocolate/c5.jpg"  class="pic" id="p51"/>
+	</div>
+	
+	<div>
+	<img src="chocolate/c6.jpg"  class="pic" id="p61"/>
+	</div>
+	
+	<div>
+	<img src="chocolate/c7.jpg"  class="pic" id="p71"/>
+	</div>
+	
+	</div>
+	
+	<div id="show1" style="background-image:url(chocolate/c1.jpg)">
+
+	</div>
+    <div id="info1">
+    <p id="head1">
+	 The Chocolate Ribbon Delight
+	</p>
+	<p id="price1">
+	Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 500 (per kg)	</p>
+	<p id="code1">
+	Cake code: &nbsp&nbsp&nbsp Ch1<br/><br/>
+
+	</p>
+
+	<p id="desc1">
+	 This a very fancy cake with rich dark chocolate ribbon toppings. A <br/> favorite of many of our customers.
+	</p>
+	<input type="submit" id="addtocart" name="addtocart" value="Add to cart"/>	
+    </div>	
+	<script type="text/javascript">
+ $("#p11").hover(function(){
+$("#show1").css("background-image","url(chocolate/c1.jpg)");
+$("#head1").html("Chocolate Citrus Tart ");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH1<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1050 (per kg)");
+$("#desc1").html("A delicious combination of orange and chocolate! <br/>Made with chocolate-flavored tart dough, a rich orange-flavored filling,<br/>and a soft chocolate ganache frosting.");
+  });
+$("#p21").hover(function(){
+$("#show1").css("background-image","url(chocolate/c2.jpg)");
+$("#head1").html("Chocolate Chip Cookie ");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH2<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1550 (per kg)");
+$("#desc1").html("Easy and delicious chocolate chip cookie recipe;<br/> a white cookie with added chocolate chips.<br/> If you prefer a dark cookie see the recipe below.");
+  });
+$("#p31").hover(function(){
+$("#show1").css("background-image","url(chocolate/c3.jpg)");
+$("#head1").html("Chocolate Lava Cakes");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH3<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 600 (per kg)");
+$("#desc1").html("Medium dark, rich chocolate cup-cakes with fluid core. <br/>This dessert is often served in fine restaurants<br/> but it is also easy to make at home. ");
+  });
+$("#p41").hover(function(){
+$("#show1").css("background-image","url(chocolate/c4.jpg)");
+$("#head1").html("Classic Chocolate Souffle");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH4<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1800 (per kg)");
+$("#desc1").html("Easy recipe for a classical chocolate souffle.<br/> For this recipe you can either use plain bittersweet chocolate,<br/> or bittersweet chocolate flavored with orange or raspberries. ");
+  });
+$("#p51").hover(function(){
+$("#show1").css("background-image","url(chocolate/c5.jpg)");
+$("#head1").html("Death By Chocolate  Dark ");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH5<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1700 (per kg)");
+$("#desc1").html('A dark, extremely rich chocolate layer cake with dark chocolate icing.<br/> The strong chocolate flavor of this cake is amazing!<br/> This is one of our best chocolate cake recipes!');
+  });
+$("#p61").hover(function(){
+$("#show1").css("background-image","url(chocolate/c6.jpg)");
+$("#head1").html("Easy Chocolate Cake  ");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH6<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1250 (per kg)");
+$("#desc1").html("A rich, medium dark chocolate layer cake.<br/> See also our chocolate layer cake recipe with only cocoa and no chocolate.");
+  });
+$("#p71").hover(function(){
+$("#show1").css("background-image","url(chocolate/c7.jpg)");
+$("#head1").html("Chocolate Layer Cake");
+$("#code1").html("Cake code: &nbsp&nbsp&nbsp CCH7<br/><br/>");
+$("#price1").html("Price: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs. 1200 (per kg)");
+$("#desc1").html("An easy recipe for a delicious two-layer chocolate cake.");
+  });
+});
+</script>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("panel").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","choc.txt");
+xmlhttp.send();
+}
+</script>
